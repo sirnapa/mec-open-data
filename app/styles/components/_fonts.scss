@@ -1,16 +1,32 @@
 @font-face {
-    font-family: 'nerissemibold';
-    src: url('fonts/neris/Neris-SemiBold-webfont.eot');
-    src: url('fonts/neris/Neris-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/neris/Neris-SemiBold-webfont.woff') format('woff'),
-         url('fonts/neris/Neris-SemiBold-webfont.ttf') format('truetype'),
-         url('fonts/neris/Neris-SemiBold-webfont.svg#nerissemibold') format('svg');
+    font-family: 'OpenSansRegular';
+    src: url('fonts/open-sans/OpenSans-Regular-webfont.eot');
+    src: url('fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-h1,h2,h3,h4,h5,a{
-	font-family: "nerissemibold","Helvetica Neue",​Helvetica,​Arial,​sans-serif;
+
+@font-face {
+  font-family: 'TodayShopBold';
+  src: 	url('fonts/today-shop/TodaySHOP-Bold.eot?#iefix') format('embedded-opentype'),  
+  		url('fonts/today-shop/TodaySHOP-Bold.otf')  format('opentype'),
+	    url('fonts/today-shop/TodaySHOP-Bold.woff') format('woff'), 
+     	url('fonts/today-shop/TodaySHOP-Bold.ttf')  format('truetype'), 
+     	url('fonts/today-shop/TodaySHOP-Bold.svg#TodaySHOP-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+	font-family: "OpenSansRegular","Helvetica Neue",​Helvetica,​Arial,​sans-serif;
+}
+
+h1,h2,h3,h4,h5{
+	font-family: "TodayShopBold","Helvetica Neue",​Helvetica,​Arial,​sans-serif;
 }
 
 
