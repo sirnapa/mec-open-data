@@ -1,0 +1,190 @@
+/* Estilos para Sly */
+
+$sly_width: 305px;
+$sly_height: 450px;
+
+.sly {
+  margin: 10px auto;
+
+  button {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #fff;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:disabled {
+      opacity: 0.2;
+    }
+
+  }
+
+  .forward, .backward {
+    float: left;
+    font-size: 60px;
+    height: 200px;
+    width: 100px;
+  }
+
+  .forward {
+    float: right;
+  }
+
+  .frame {
+	width: 100%; 
+	height: $sly_height;
+	padding: 15px 0; 
+    line-height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-shadow: none;
+
+    ul {
+      height: 100%;
+      list-style: outside none none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        width: $sly_width;
+        height: 100%;
+        background: none repeat scroll 0 0 #eee;
+        color: #3a3c47;
+        cursor: pointer;
+        float: left;
+        margin: 0 1px 0 0;
+        padding: 0;
+        text-align: center;
+
+        &.active {
+        	.thumbnail{
+          		border-color: $sly_color_borde;
+        	}
+        }
+
+        .thumbnail{
+        	height: 100%;
+        }
+
+      }
+
+    }
+
+  }
+
+  .scrollbar {
+    height: 2px;
+    line-height: 0;
+    margin: 0 auto 30px;
+    width: 100%;
+
+    .handle {
+      background: none repeat scroll 0 0 #fff;
+      cursor: pointer;
+      height: 100%;
+      width: 100px;
+
+      .mousearea {
+        height: 20px;
+        left: 0;
+        position: absolute;
+        top: -9px;
+        width: 100%;
+      }
+
+    }
+
+  }
+
+  .pages {
+    list-style: outside none none;
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      background: none repeat scroll 0 0 #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset;
+      cursor: pointer;
+      display: inline-block;
+      height: 14px;
+      margin: 0 4px;
+      overflow: hidden;
+      text-indent: -999px;
+      width: 14px;
+
+      &:hover {
+        background: none repeat scroll 0 0 #aaa;
+      }
+
+      &.active {
+        background: none repeat scroll 0 0 #666;
+      }
+
+    }
+
+  }
+
+  .controls {
+    margin: 50px 0 0;
+    text-align: center;
+
+    .divider {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    button {
+      font-family: Novecento,sans-serif;
+      line-height: 32px;
+      vertical-align: middle;
+
+      i {
+        font-size: 32px;
+        margin: 5px;
+        padding: 0;
+        position: relative;
+        top: -2px;
+        vertical-align: middle;
+      }
+
+    }
+
+  }
+
+}
+
+.csstransforms3d .frame {
+  line-height: 200px;
+  perspective: 800px;
+  perspective-origin: 50% 50%;
+
+  ul {
+
+    transform-style: preserve-3d;
+
+    li {
+      margin: 0 -25px;
+      position: relative;
+      transform: rotateY(60deg) scale(0.9);
+      transition: transform 300ms ease-out 0s;
+
+      &.active {
+        transform: scale(1);
+        z-index: 10;
+
+        ~ li {
+          transform: rotateY(-60deg) scale(0.9);
+        }
+
+      }
+
+    }
+
+  }
+
+}

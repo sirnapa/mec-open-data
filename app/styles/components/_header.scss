@@ -1,0 +1,60 @@
+header{
+	padding-bottom: 20px; 
+	
+	.cabecera{
+		.logo{
+			height: 100px;
+
+			&.datos-abiertos{
+				background-size: 75%;
+			}
+		}
+	}
+
+	.principal{
+		background: $mec_color_azul_marino;
+		height: 130px;
+		margin-top: -30px;
+		padding-top: 15px;
+		box-shadow: 0 0 15px $mec_color_sombras;
+		cursor: pointer;
+	}
+
+	nav.navbar-principal{
+		margin-top: 20px;
+		background-color: $mec_color_rojo;
+		color: $color_blanco;
+		border-radius: 0 0 16px 16px;
+
+		a{
+			color: $color_blanco;
+
+			&:not(.navbar-brand):hover,
+			&:not(.navbar-brand):focus{
+				color: $color_negro;
+			}
+		}
+
+		.links-sociales{
+			margin-top: 15px;
+		}
+
+		.dropdown-menu{
+			a{
+				color: $color_negro;
+			}
+		}
+	}
+}
+
+@media ( max-width :768px) {
+	header{
+		nav.navbar-principal{
+			.dropdown-menu{
+				a{
+					color: $color_blanco;
+				}
+			}
+		}
+	}
+}

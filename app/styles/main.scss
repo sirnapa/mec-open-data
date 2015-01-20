@@ -1,0 +1,14 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$fa-font-path: "../bower_components/fontawesome/fonts";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "components/variables.scss";
+@import "components/fonts.scss";
+@import "components/mec-iconos.scss";
+@import "components/base.scss";
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/logos.scss";
+@import "components/sly.scss";

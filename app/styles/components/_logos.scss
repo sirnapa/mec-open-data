@@ -1,0 +1,25 @@
+.logo{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	&.mec{
+          background-image: url('../images/mec.png');
+	}
+
+	&.mec-letras-blancas{
+          background-image: url('../images/mec-letras-blancas.png');
+	}
+
+	&.gobierno{
+          background-image: url('../images/logo-gobierno.png');
+	}
+
+	&.bandera{
+          background-image: url('../images/bandera.svg');
+	}
+
+	&.datos-abiertos{
+          background-image: url('../images/datos_abiertos_grande.png');
+	}
+}

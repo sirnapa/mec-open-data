@@ -1,0 +1,24 @@
+// Colores institucionales
+$mec_color_rojo: 		rgb(140,5,5);
+$mec_color_azul_marino: rgb(70,95,110);
+$mec_color_amarillo: 	rgb(255,205,0);
+$mec_color_gris: 		rgb(55,55,55);
+$mec_color_sombras:		#000000;
+
+
+// Colores básicos
+$color_blanco: 			#FFFFFF;
+$color_negro: 			#333333;
+$color_gris_oscuro: 	#cacaca;
+$color_gris_medio: 		#e5e5e5;
+$color_gris_claro: 		#f4f4f4;
+
+// Bootstrap
+$brand-primary:         $mec_color_gris !default;
+$brand-success:         $mec_color_azul_marino !default;
+$brand-info:            $mec_color_negro !default;
+$brand-warning:         $mec_color_amarillo !default;
+$brand-danger:          $mec_color_rojo !default;
+
+// Sly
+$sly-color-borde:		$mec_color_rojo;

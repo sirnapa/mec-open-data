@@ -1,0 +1,62 @@
+/* Custom page footer */
+.footer {
+  margin: 50px 0 -5px;
+  padding: 20px;
+  color: #777;
+  border-top: 1px solid $color_gris_medio;
+  background: $color_gris_claro;
+
+  .logo{
+  	height: 50px;
+  }
+
+  a{
+  	color: $gray-dark;
+  }
+
+  hr{
+    border-color: $color_gris_oscuro;
+  }
+
+  h3{
+    font-size: 3em;
+
+    span{
+      &.signo{
+        color: $color_gris_oscuro;
+      }
+    }
+  }
+
+  .list-footer{
+    &.social{
+      border-left: 1px solid $color_gris_oscuro;
+      padding-left: 25px;
+      
+      li{
+        padding: 20px 0;
+      }
+    }
+
+    li{
+      color: #777777;
+      font-size: 1.25em;
+      padding: 15px 0;
+
+      i{
+        color: $color_gris_oscuro;
+        margin-right: 15px;
+        font-size: 2em;
+      }
+
+    }
+  }
+}
+
+@media ( max-width :990px) {
+	.footer{
+		.logo{
+			margin: 25px 0;
+		}
+	}
+}
