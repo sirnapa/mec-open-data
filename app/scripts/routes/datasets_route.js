@@ -10,6 +10,38 @@ Mec.DatasetsRoute = Ember.Route.extend({
                 descripcion: 'Contiene datos básicos acerca de las instituciones educativas, como el departamento, distrito y zona a la que pertenecen las mismas.'
             },
             {
+                nombre: 'DATOS ESPECÍFICOS DE INSTITUCIONES EDUCATIVAS',
+                descripcion: 'Contiene datos de los niveles/modalidades de educación ofertados por las instituciones educativas; región administrativa a la que pertenece la institución educativa; tipo de organización, participación comunitaria, dirección del establecimiento escolar, servicio disponible (internet, telefono, correo electronico, etc.). Una institución educativa puede poseer diferentes locales escolares ubicados en un mismo o en diferentes departamentos geográficos. El SIEC considera una misma institución cuando varios niveles o modalidades tienen una organización, gestión y administración única. Por ejemplo: Centro Regional de Educación Gral. Patricio Escobar de Encarnación, Colegio Santa Clara de Asunción.'
+            },
+            {
+                nombre: 'MATRICULA EDUCACION ESCOLAR BASICA - CICLOS',
+                descripcion: 'Se refiere a la cantidad de alumnos matriculados del 1.º al 9.º grado con sus correspondientes códigos identificatorios.'
+            },
+            {
+                nombre: 'MATRICULA EDUCACION INCLUSIVA',
+                descripcion: 'Corresponde a la cantidad de matriculados por ciclo/niveles/programas especiales de educación inclusiva con sus correspondientes códigos identificatorios.'
+            },
+            {
+                nombre: 'MATRICULA EDUCACION PERMANENTE',
+                descripcion: 'Se refiere a la cantidad de matriculados en las diferentes modalidades de educación permanente con sus correspondientes códigos identificatorios.'
+            },
+            {
+                nombre: 'MATRICULA EDUCACION SUPERIOR',
+                descripcion: 'Se refiere a la cantidad de matriculados en las diferentes modalidades de educación superior con sus correspondientes códigos identificatorios.'
+            },
+            {
+                nombre: 'MATRICULA EDUCACION INICIAL',
+                descripcion: 'Se refiere a la cantidad de matriculados en las etapas maternal, prejardín, jardín y preescolar con sus correspondientes códigos identificatorios.'
+            },
+            {
+                nombre: 'MATRICULA EDUCACION MEDIA',
+                descripcion: 'Se refiere a la cantidad de matriculados del 1.º al 3er. curso en las diferentes modalidades de educación media con sus correspondientes códigos identificatorios.'
+            },
+            {
+                nombre: 'MATRICULA POR DEPARTAMENTO Y DISTRITO',
+                descripcion: 'Se refiere a la cantidad total de matriculados por departamento/distrito según sector y zona.'
+            },
+            {
                 nombre: '',
                 descripcion: ''
             }
