@@ -1,0 +1,1 @@
+Mec.ApplicationAdapter = DS.FixtureAdapter;

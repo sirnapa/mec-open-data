@@ -1,7 +1,7 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+$icon-font-path: "../styles/fonts/"; // Change the path to the fonts
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 
-$fa-font-path: "../bower_components/fontawesome/fonts";
+$fa-font-path: "../styles/fonts";
 @import "fontawesome/scss/font-awesome.scss";
 
 @import "components/variables.scss";
