@@ -22,14 +22,16 @@
             <span class="sr-only">Toggle navigation</span>
             <span class="fa fa-lg fa-bars"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          {{#link-to 'index' class="navbar-brand"}}
             Datos Abiertos
-          </a>
+          {{/link-to}}
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Datasets</a></li>
-            <li><a href="#">Visualizaciones</a></li>
+            <li>{{#link-to 'datasets'}}Datasets{{/link-to}}</li>
+            <li>{{#link-to 'visualizaciones'}}Visualizaciones{{/link-to}}</li>
+            <li>{{#link-to 'acerca-de'}}Acerca de{{/link-to}}</li>
+            <li>{{#link-to 'aviso-legal'}}Aviso legal{{/link-to}}</li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">

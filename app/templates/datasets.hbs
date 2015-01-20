@@ -1,0 +1,19 @@
+<div class="container">
+	<h1>Datasets</h1>
+	<br>
+</div>
+
+<div class="container-flow">
+
+	{{#each dataset in model}}
+		<div class="row">
+    		<div class="col-sm-4">
+				<h2>{{dataset.nombre}}</h2>
+			</div>
+			<div class="col-sm-8">
+				<p>{{dataset.descripcion}}</p>
+			</div>
+	  	</div>
+	{{/each}}
+
+</div>

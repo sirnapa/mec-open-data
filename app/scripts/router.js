@@ -1,3 +1,6 @@
 Mec.Router.map(function () {
-  // Add your routes here
+	this.resource('aviso-legal');
+	this.resource('acerca-de');
+	this.resource('datasets');
+	this.resource('visualizaciones');
 });
