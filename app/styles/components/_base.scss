@@ -3,6 +3,13 @@ body{
     background-image: url('../images/degradado_gobierno.png');
     background-repeat: repeat no-repeat;
     padding-top: 50px;
+
+    @media (max-width: $screen-sm-min) {
+      &{
+        background-position: 0 -30px;
+        padding-top: 0px;
+      }
+    }
 }
 
 /* Old browsers */
@@ -37,77 +44,5 @@ body{
 
   &:hover{
     opacity: 0.8;
-  }
-}
-
-/* Carousel del home */
-.carousel{
-  &.home{
-    margin-bottom: 25px;
-  }
-  .carousel-inner > .item > img, .carousel-inner > .item > a > img{
-    margin: 0 auto;
-  }
-}
-
-/* Títulos en Pestañas */
-.nav-tabs {
-  a{
-    outline: none;
-
-    h1,h2,h3,h4,h5,h6{
-      font-size: 1.3em;
-      margin: 5px 0 0;
-    }
-  }
-}
-
-/* Título de Visualización */
-.titulo-visualizacion{
-  padding: 5px 0 10px;
-
-  h1{
-    font-size: 2em;
-  }
-  
-  p.lead{
-    font-size: 1em;
-  }
-
-}
-
-/* Tabla */
-.table thead tr{
-  background: #777;
-  color: $color_blanco;
-
-  td{
-    border-top: none;
-    border-bottom: none;
-
-    .form-control {
-        font-size: 0.9em;
-        height: 30px;
-        margin-top: -5px;
-    }
-  }
-}
-
-/* Código para exportar */
-.codigo-exportar{
-  width: 100%;
-  height: 100px;
-  resize: none;
-  border: none;
-}
-
-/* Social sharing */
-.links-sociales{
-  .fb_iframe_widget{
-    display: inline-flex !important;
-    margin-right: 10px;
-  }
-  .row{
-    margin: 25px 0;
   }
 }

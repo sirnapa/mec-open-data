@@ -8,6 +8,10 @@
 
   .logo{
   	height: 50px;
+
+    @media (min-width: $screen-md-min) {
+      margin: 25px 0;
+    }
   }
 
   a{
@@ -51,12 +55,4 @@
 
     }
   }
-}
-
-@media ( max-width :990px) {
-	.footer{
-		.logo{
-			margin: 25px 0;
-		}
-	}
 }

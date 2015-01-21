@@ -1,4 +1,4 @@
-Mec.DatasetsRoute = Ember.Route.extend({
+Mec.DatosRoute = Ember.Route.extend({
     model: function () {
         return [
             {

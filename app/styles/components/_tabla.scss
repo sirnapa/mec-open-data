@@ -1,5 +1,23 @@
-.tabla{
+/* Listados responsive */
+.listado{
 	a{
 		line-height: 2.7em;
 	}
+}
+
+/* Tabla */
+.table thead tr{
+  background: #777;
+  color: $color_blanco;
+
+  td{
+    border-top: none;
+    border-bottom: none;
+
+    .form-control {
+        font-size: 0.9em;
+        height: 30px;
+        margin-top: -5px;
+    }
+  }
 }
