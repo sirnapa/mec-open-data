@@ -3,7 +3,7 @@ header{
 	
 	.cabecera{
 		.logo{
-			height: 100px;
+			height: 80px;
 
 			&.datos-abiertos{
 				background-size: 75%;
@@ -13,7 +13,7 @@ header{
 
 	.principal{
 		background: $mec_color_azul_marino;
-		height: 130px;
+		height: 110px;
 		margin-top: -30px;
 		padding-top: 15px;
 		box-shadow: 0 0 15px $mec_color_sombras;

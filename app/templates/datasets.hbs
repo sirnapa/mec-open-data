@@ -1,21 +1,23 @@
-<div class="container">
+<div class="container-fluid">
 	<h1>Datasets</h1>
-	<br>
-</div>
 
-<div class="container-flow">
+	<div class="tabla">
+		<hr>
+		{{#each dataset in model}}
 
-	{{#each dataset in model}}
-		<div class="well">
 			<div class="row">
-	    		<div class="col-sm-4">
-					<h2>{{dataset.nombre}}</h2>
+				<span class="col-sm-1 text-right">{{dataset.id}}</span>
+	    		<div class="col-sm-3">
+					<span class="daxline">{{dataset.nombre}}</span><br>
+					{{#link-to dataset.diccionario}}<i class="fa fa-lg fa-book"></i> Ver diccionario{{/link-to}}<br>
+					{{#link-to dataset.datos}}<i class="fa fa-lg fa-database"></i> Ver datos{{/link-to}}<br>
 				</div>
 				<div class="col-sm-8">
 					<p>{{dataset.descripcion}}</p>
 				</div>
 			</div>
-	  	</div>
-	{{/each}}
+		  	<hr>
 
+		{{/each}}
+	</div>
 </div>
