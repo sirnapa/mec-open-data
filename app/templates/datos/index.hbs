@@ -1,0 +1,49 @@
+<h1>Datos</h1>
+
+<div class="listado">
+	<hr>
+	{{#each dataset in model}}
+
+		<div class="row">
+			<span class="col-sm-1 text-right text-muted contador">{{dataset.id}}</span>
+    		<div class="col-sm-3">
+				<span class="daxline">{{dataset.nombre}}</span><br>
+				
+				<div class="acciones">
+
+					{{#if dataset.diccionario}}
+						{{#link-to 'datos.diccionario'}}
+							<i class="fa fa-lg fa-fw fa-book"></i> <span class="hidden-xs">Diccionario</span>
+						{{/link-to}}
+					{{/if}}
+					
+					{{#if dataset.datos}}
+						{{#link-to 'datos.ver'}}
+							<i class="fa fa-lg fa-fw fa-database"></i> <span class="hidden-xs">Datos</span>
+						{{/link-to}}
+					{{/if}}
+
+					{{#if dataset.mapa}}
+						{{#link-to 'datos.mapa'}}
+							<i class="fa fa-lg fa-fw fa-map-marker"></i> <span class="hidden-xs">Mapa</span>
+						{{/link-to}}
+					{{/if}}
+
+					<a href="Javascript:void(0);" onclick="descripcion(this);" class="visible-xs-inline hidden-sm hidden-md hidden-lg">
+						<i class="fa fa-lg fa-fw fa-list"></i> 
+						<span class="visible-xs-inline" data-ver="true">Ver</span>
+						<span class="hidden" data-ocultar="true">Ocultar</span>
+						descripción
+					</a>
+
+				</div>
+
+			</div>
+			<div class="col-sm-8 hidden-xs">
+				<p>{{dataset.descripcion}}</p>
+			</div>
+		</div>
+	  	<hr>
+
+	{{/each}}
+</div>

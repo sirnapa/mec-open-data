@@ -1,8 +1,28 @@
 /* Listados responsive */
 .listado{
 	a{
-		line-height: 2.7em;
+		line-height: 2.5em;
+    font-size: 0.9em;
+    white-space: nowrap;
+    margin-right: 20px;
 	}
+  
+  @media (max-width: $screen-sm-min) {
+
+    a{
+      margin-right: 5px;
+    }
+
+    .contador{
+      float: left;
+    }
+
+    .acciones{
+      text-align: center;
+    }
+
+  }
+
 }
 
 /* Tabla */
