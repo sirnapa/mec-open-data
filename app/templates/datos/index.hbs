@@ -23,11 +23,23 @@
 						{{/link-to}}
 					{{/if}}
 
+					{{#if dataset.catalogo}}
+						{{#link-to 'datos.catalogo'}}
+							<i class="icon-py-datos"></i><span class="hidden-xs"> Catálogo</span>
+						{{/link-to}}
+					{{/if}}
+
 					{{#if dataset.mapa}}
 						{{#link-to 'datos.mapa'}}
 							<i class="icon-py-mapa"></i><span class="hidden-xs"> Mapa</span>
 						{{/link-to}}
 					{{/if}}
+
+					{{#each archivo in dataset.archivos}}
+						<a href="Javascript:void(0);">
+							<i class="fa fa-file-{{unbound archivo.tipo}}-o"></i><span class="hidden-xs"> {{archivo.nombre}}</span>
+						</a>
+					{{/each}}
 
 					<a href="Javascript:void(0);" onclick="descripcion(this);" class="visible-xs-inline hidden-sm hidden-md hidden-lg">
 						<i class="icon-py-etiqueta"></i> 

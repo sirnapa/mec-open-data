@@ -78,9 +78,123 @@ Mec.DatosRoute = Ember.Route.extend({
                 datos: true
             },
             {
-                id: '',
-                nombre: '',
-                descripcion: ''
+                id: '11',
+                nombre: 'NOMINA DE FUNCIONARIOS DOCENTES',
+                descripcion: ' Contiene todos los datos de la nómina de funcionarios docentes, conforme a lo establecido en la ley 5189/14. El formato de los datos sigue la recomendación propuesta por la Secretaría de la Función Pública.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '12',
+                nombre: 'NOMINA DE FUNCIONARIOS ADMINISTRATIVOS',
+                descripcion: 'Contiene todos los datos de la nómina de funcionarios administrativos, conforme a lo establecido en la ley 5189/14. El formato de los datos sigue la recomendación propuesta por la Secretaría de la Función Pública.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '13',
+                nombre: 'NOMINA DE FUNCIONARIOS COMISIONADOS DEL MEC A OTROS ORGANISMOS DEL ESTADO',
+                descripcion: 'Contiene todos los datos de la nómina de los funcionarios que fueron comisionados del MEC a otros organismos del Estado.',
+                archivos: [
+                    {
+                        nombre: 'Nómina',
+                        tipo: 'excel'
+                    }
+                ]
+            },
+            {
+                id: '14',
+                nombre: 'NOMINA DE FUNCIONARIOS COMISIONADOS AL MEC DESDE OTROS ORGANISMOS DEL ESTADO',
+                descripcion: 'Contiene todos los datos de la nómina de los funcionarios que fueron comisionados desde otros organismos del Estado al MEC.',
+                archivos: [
+                    {
+                        nombre: 'Nómina',
+                        tipo: 'excel'
+                    }
+                ]
+            },
+            {
+                id: '15',
+                nombre: 'INVENTARIO DE BIENES',
+                descripcion: 'Contiene todos los datos del inventario de bienes, muebles, inmuebles y vehículos con que cuenta el MEC.',
+                archivos: [
+                    {
+                        nombre: 'Rodados e inmuebles',
+                        tipo: 'zip'
+                    },{
+                        nombre: 'Muebles',
+                        tipo: 'zip'
+                    }
+                ]
+            },
+            {
+                id: '16',
+                nombre: 'CONTRATACIONES',
+                descripcion: 'Se refiere a los llamados para contrataciones de bienes y/o servicios del Ministerio de Educación y Cultura.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '17',
+                nombre: 'REGISTRO DE TITULOS',
+                descripcion: 'Contiene datos de la nómina de personas cuyos títulos de grado y postgrado fueron registrados en el Ministerio de Educación y Cultura.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '18',
+                nombre: 'PLANILLAS DE ESTABLECIMIENTOS ESCOLARES PRIORIZADOS ELEGIBLES - FONACIDE',
+                descripcion: 'Contiene información sobre establecimientos escolares priorizados y elegibles para la inversión de proyectos de infraestructura en educación a ser financiados con recursos provenientes del Fondo Nacional de Inversión Pública y Desarrollo (FONACIDE) transferidos a las Gobernaciones y Municipalidades, que han reportado sus requerimientos a través de la metodología de Microplanificación de la oferta educativa.',
+                catalogo: true
+            },
+            {
+                id: '19',
+                nombre: 'ESTABLECIMIENTOS ESCOLARES PRIORIZADOS ELEGIBLES - FONACIDE: AULAS',
+                descripcion: 'Corresponde a los requerimientos de contrucción, reparación o adecuación de aulas correspondientes a las instituciones educativas del país priorizadas por distrito y por período.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '20',
+                nombre: 'ESTABLECIMIENTOS ESCOLARES PRIORIZADOS ELEGIBLES - FONACIDE: SANITARIOS',
+                descripcion: 'Corresponde a los requerimientos de construcción, reparación y/o adecuación de sanitarios correspondientes a las instituciones educativas del país priorizadas por distrito y por período.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '21',
+                nombre: 'ESTABLECIMIENTOS ESCOLARES PRIORIZADOS ELEGIBLES - FONACIDE: OTROS ESPACIOS',
+                descripcion: 'Corresponde a los requerimientos de construcción, reparación y/o adecuación de otros espacios (distintos a aulas y sanitarios) correspondientes a las instituciones educativas del país priorizadas por distrito y por periodo.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '22',
+                nombre: 'ESTABLECIMIENTOS ESCOLARES PRIORIZADOS ELEGIBLES - FONACIDE: MOBILIARIOS',
+                descripcion: 'Corresponde a los requerimientos de mobiliarios, muebles o equipamientos de aulas correspondientes a las instituciones educativas del país priorizadas por distrito y por período.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '23',
+                nombre: 'Servicios Básicos de los Establecimientos según FONACIDE',
+                descripcion: 'Contiene datos generales de los establecimientos escolares, relacionados a la ubicación geográfica, servicios básicos e infraestructura.',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '24',
+                nombre: 'Proyecto 111',
+                descripcion: 'Contiene la datos del proyecto de "Ampliación y reposición de espacios escolares en 111 Establecimientos Educativos del MEC, en Asunción y 10 departamentos geográficos del país". Dicho proyecto tiene como propósito culminar las obras iniciadas en los años 2011 y 2012 –que cuentan con contratos vigentes– considerando los requerimientos pedagógicos y socioculturales. Las intervenciones consisten en ampliar la infraestructura edilicia escolar para aumentar la capacidad del servicio educacional, sin modificación de lo existente, así como la reposición que implica la renovación parcial o total de los espacios educativos existentes. El proyecto es financiado por el Fondo para la Excelencia de la Educación y la Investigación y totaliza una inversión de 6.663.596 dólares americanos (tipo de cambio: 4.500).',
+                diccionario: true,
+                datos: true
+            },
+            {
+                id: '25',
+                nombre: 'Proyecto 822',
+                descripcion: 'Contiene datos del proyecto de “Ampliación y reposición de espacios escolares en 822 Establecimientos Educativos del MEC, en Asunción y los 17 departamentos geográficos del país”. Dicho proyecto busca mejorar la estructura edilicia de 822 establecimientos educativos según las normas estandarizadas de infraestructura escolar, acorde a los requerimientos pedagógicos actuales. Además de ampliar los espacios educativos, se proveerán de mobiliarios acorde con la demanda de la matrícula para asegurar las condiciones adecuadas para el desarrollo de las situaciones de enseñanza- aprendizaje en las instituciones educativas. El proyecto es financiado por el Fondo para la Excelencia de la Educación y la Investigación y totaliza una inversión de 42.791.803 dólares americanos (Tipo de cambio: 4.500).',
+                diccionario: true,
+                datos: true
             }
         ];
     }

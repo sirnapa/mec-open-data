@@ -3,6 +3,7 @@ Mec.Router.map(function () {
 	this.resource('acerca-de');
 	this.resource('datos',function(){
 		this.route('ver');
+		this.route('catalogo');
 		this.route('diccionario');
 		this.route('mapa');
 	});
