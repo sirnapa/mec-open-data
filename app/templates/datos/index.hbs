@@ -13,24 +13,24 @@
 
 					{{#if dataset.diccionario}}
 						{{#link-to 'datos.diccionario'}}
-							<i class="fa fa-lg fa-fw fa-book"></i> <span class="hidden-xs">Diccionario</span>
+							<i class="icon-py-manual"></i><span class="hidden-xs"> Diccionario</span>
 						{{/link-to}}
 					{{/if}}
 					
 					{{#if dataset.datos}}
 						{{#link-to 'datos.ver'}}
-							<i class="fa fa-lg fa-fw fa-database"></i> <span class="hidden-xs">Datos</span>
+							<i class="icon-py-datos"></i><span class="hidden-xs"> Datos</span>
 						{{/link-to}}
 					{{/if}}
 
 					{{#if dataset.mapa}}
 						{{#link-to 'datos.mapa'}}
-							<i class="fa fa-lg fa-fw fa-map-marker"></i> <span class="hidden-xs">Mapa</span>
+							<i class="icon-py-mapa"></i><span class="hidden-xs"> Mapa</span>
 						{{/link-to}}
 					{{/if}}
 
 					<a href="Javascript:void(0);" onclick="descripcion(this);" class="visible-xs-inline hidden-sm hidden-md hidden-lg">
-						<i class="fa fa-lg fa-fw fa-list"></i> 
+						<i class="icon-py-etiqueta"></i> 
 						<span class="visible-xs-inline" data-ver="true">Ver</span>
 						<span class="hidden" data-ocultar="true">Ocultar</span>
 						descripción
