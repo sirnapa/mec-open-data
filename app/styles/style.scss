@@ -1,10 +1,10 @@
+@import "components/variables.scss";
 $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 
 $fa-font-path: "../styles/fonts";
 @import "fontawesome/scss/font-awesome.scss";
 
-@import "components/variables.scss";
 @import "components/fonts.scss";
 @import "components/iconos-gobierno.scss";
 @import "components/mec-iconos.scss";

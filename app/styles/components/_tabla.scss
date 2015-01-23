@@ -1,24 +1,38 @@
 /* Listados responsive */
 .listado{
-	a{
-		line-height: 2.5em;
-    font-size: 0.9em;
-    white-space: nowrap;
-    margin-right: 20px;
+  .titulos{
+    font-family: "DaxlinePro-Medium","Helvetica Neue",​Helvetica,​Arial,​sans-serif !important;
+    font-size: 1.3em;
 
-    i{
-      font-size: 2em;
+    div{
+      overflow-x: hidden;
     }
-	}
+  }
+
+  label{
+    color: $mec_color_azul_marino;
+  }
 
   .acciones{
     margin-top: 5px;
+
+    a{
+      line-height: 2.5em;
+      font-size: 0.9em;
+      white-space: nowrap;
+      margin-right: 20px;
+
+      i{
+        font-size: 2em;
+      }
+    }
+
   }
   
   @media (max-width: $screen-sm-min) {
 
-    a{
-      margin-right: 15px;
+    label{
+      margin-top: 15px;
     }
 
     .contador{
@@ -27,6 +41,11 @@
 
     .acciones{
       text-align: center;
+
+      a{
+        margin-right: 15px;
+      }
+      
     }
 
   }
