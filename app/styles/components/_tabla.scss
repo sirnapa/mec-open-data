@@ -53,18 +53,14 @@
 }
 
 /* Tabla */
-.table thead tr{
-  background: #777;
-  color: $color_blanco;
+.table{
 
-  td{
-    border-top: none;
-    border-bottom: none;
+  .acciones{
 
-    .form-control {
-        font-size: 0.9em;
-        height: 30px;
-        margin-top: -5px;
+    a{
+      white-space: nowrap;
     }
+
   }
+  
 }

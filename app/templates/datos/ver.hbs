@@ -3,85 +3,48 @@
 <br>
 
 <div class="table-responsive">
-	<table class="table table-striped table-bordered table-hover">
-
-	  <tbody><tr>
-
-	    <form method="post" id="form-buscar-establecimientos" data-remote="true" action="http://datos.mec.gov.py/data/establecimientos_lista" accept-charset="UTF-8"></form>
-
-	      <th class="text-min celda-derecha" style="width:8%;">
-	        <label for="Periodo">Periodo</label><br><br>
-	        <select name="form_buscar_establecimientos[anio]" id="form_buscar_establecimientos_anio"><option value="2014">2014</option>
-	<option value="2012">2012</option></select>
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_anio'),1);; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:10%;">
-	        <label>Código Establecimiento</label><br>
-	        <input type="text" name="form_buscar_establecimientos_codigo_establecimiento" id="form_buscar_establecimientos_codigo_establecimiento" class="text-min">
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_codigo_establecimiento'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:10%;">
-	        <label for="Departamento">Departamento</label><br><br>
-	        <input type="text" name="form_buscar_establecimientos_nombre_departamento" id="form_buscar_establecimientos_nombre_departamento" class="text-min">
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_nombre_departamento'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:10%;">
-	        <label for="Distrito">Distrito</label><br><br>
-	        <input type="text" name="form_buscar_establecimientos_nombre_distrito" id="form_buscar_establecimientos_nombre_distrito" class="text-min">
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_nombre_distrito'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:10%;">
-	        <label for="Zona">Zona</label><br><br>
-	        <input type="text" name="form_buscar_establecimientos_nombre_zona" id="form_buscar_establecimientos_nombre_zona" class="text-min">
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_nombre_zona'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:10%;">
-	        <label for="Barrio_Localidad">Barrio/localidad</label><br><br>
-	        <input type="text" name="form_buscar_establecimientos_nombre_barrio_localidad" id="form_buscar_establecimientos_nombre_barrio_localidad" class="text-min">
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_nombre_barrio_localidad'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:10%;">
-	        <label>Dirección</label><br><br>
-	        <input type="text" name="form_buscar_establecimientos_direccion" id="form_buscar_establecimientos_direccion" class="text-min">
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_direccion'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:14%;">
-	        <label>Programa</label><br><br>
-	        <select name="form_buscar_establecimientos[programa]" id="form_buscar_establecimientos_programa"><option value=""></option>
-	<option value="1">Jornada Extendida</option></select>
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_programa'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:10%;">
-	        <label>Proyecto 111</label><br><br>
-	        <select name="form_buscar_establecimientos[proyecto_111]" id="form_buscar_establecimientos_proyecto_111"><option value=""></option>
-	<option value="NO">NO</option>
-	<option value="SI">SI</option></select>
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_proyecto_811'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th class="text-min" style="width:10%;">
-	        <label>Proyecto 822</label><br><br>
-	        <select name="form_buscar_establecimientos[proyecto_822]" id="form_buscar_establecimientos_proyecto_822"><option value=""></option>
-	<option value="NO">NO</option>
-	<option value="SI">SI</option></select>
-	        <a onclick="quitar_filtro($('#form_buscar_establecimientos_proyecto_822'));; return false;" href="#"><i class="fa fa-times"></i></a>
-	      </th>
-
-	      <th id="ubicaciones-geograficas" style="width:16px;"></th>
-	      
-
-	  </tr>
-
-	  </tbody><tbody id="establecimientos-lista"></tbody>
-
-	</table>
-
+   <table class="table table-small-font table-bordered table-striped">
+   		<thead>
+   			<tr>
+   				<th data-priority="1">Periodo</th>
+				<th data-priority="1">Código Establecimiento</th>
+				<th data-priority="2">Departamento</th>
+				<th data-priority="2">Distrito</th>
+				<th data-priority="2">Zona</th>
+				<th data-priority="3">Barrio/localidad</th>
+				<th data-priority="3">Dirección</th>
+				<th data-priority="2">Programa</th>
+				<th data-priority="2">Proyecto 111</th>
+				<th data-priority="2">Proyecto 822</th>
+				<th data-priority="1">Localización</th>
+			</tr>
+   		</thead>
+   		<tbody>
+   			{{#each dato in model}}
+   				<tr>
+   					<td>{{dato.periodo}}</td>
+					<td>
+						<a href="http://datos.mec.gov.py/doc/establecimientos/{{unbound dato.codigo_establecimiento}}">{{dato.codigo_establecimiento}}</a>
+					</td>
+					<td>{{dato.departamento}}</td>
+					<td>{{dato.distrito}}</td>
+					<td>{{dato.zona}}</td>
+					<td>{{dato.barrio_localidad}}</td>
+					<td>{{dato.direccion}}</td>
+					<td>{{dato.programa}}</td>
+					<td>{{dato.proyecto111}}</td>
+					<td>{{dato.proyecto822}}</td>
+					<td class="acciones">
+						{{#if dato.localizacion}}
+							<a href="Javascript:void(0)" 
+								data-latitud="{{unbound dato.localizacion.latitud}}"
+								data-longitud="{{unbound dato.localizacion.longitud}}">
+								<i class="fa-lg icon-py-mapa"></i> Ver mapa
+							</a>
+						{{/if}}
+					</td>
+   				</tr>
+   			{{/each}}
+   		</tbody>
+   </table>
 </div>
