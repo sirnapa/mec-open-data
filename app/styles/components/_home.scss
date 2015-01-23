@@ -1,13 +1,24 @@
 /* Pagina principal */
 .galeria{
+	border: 1px solid $color_gris_oscuro;
+	background: $color_gris_medio;
+	margin: 5px -15px 0;
+	padding: 35px 20px 20px 35px;
+
+	@media (max-width: $screen-sm-min) {
+		margin-top: 0;
+		padding: 20px 30px 5px;
+	}
 
 	.vista-previa{
+		margin-bottom: 20px;
+		background-color: $color_blanco;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		border: 2px solid $color_blanco;
 		border-radius: 5px;
-		border: 1px solid $color_gris_medio;
-		margin-bottom: 20px; 
+		box-shadow: 0 0 5px 0 $color_gris_oscuro inset;
 
 		&.active{
 			border-color: $mec_color_rojo;
@@ -16,12 +27,16 @@
 
 	.vista-principal{
 		cursor: pointer;
+		background-color: $color_blanco;
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
+		border: 2px solid $color_gris_oscuro;
+		border-radius: 5px;
+		box-shadow: 0 0 5px 0 $color_gris_oscuro inset;
 
 		.carousel-caption{
-			background-color: rgba(0,0,0,0.3);
+			background-color: rgba(0,0,0,0.5);
 		}
 	}
 

@@ -15,9 +15,9 @@ Mec.IndexView = Ember.View.extend({
 
         	$('#portada').data('total',$('.vista-previa').length)
             .css('height', $('.vista-previa').first().is(':visible')? 
-              alto/2 : ($(window).height() - 
-                        $('header').outerHeight(true) - 
-                        $('#anterior').parent().outerHeight(true)));
+              (alto/2) - 15 : ($(window).height() - 30 -
+                              $('header').outerHeight(true) - 
+                              $('#anterior').parent().outerHeight(true)));
         };
 
         $('body').attr('onresize','redimensionar();');
@@ -78,10 +78,12 @@ Mec.IndexView = Ember.View.extend({
             if($('#portada').hasClass('cambio-automatico')){
               var indice = $('#portada').data('indice');
 
-              if(indice<($('#portada').data('total') - 1)){
-                siguiente($('#siguiente a'));
-              }else{
-                cambiar($('.vista-previa').first());
+              if(!$('#siguiente').is(':visible')){
+                if(indice<($('#portada').data('total') - 1)){
+                  siguiente($('#siguiente a'));
+                }else{
+                  cambiar($('.vista-previa').first());
+                }
               }
 
               autocambio();
