@@ -1,3 +1,32 @@
-<h3>Galería</h3>
-<img src="images/destacados/ejemplo1.png" alt="...">
-<img src="images/destacados/ejemplo2.png" alt="...">
+<div class="row galeria">
+
+	<div id="portada" class="col-sm-8 vista-principal cambio-automatico">
+	</div>
+
+	<nav class="col-sm-12 visible-xs">
+	  <ul class="pager">
+	    <li id="anterior" class="previous">
+	    	<a href="#" onclick="anterior(this);"><span aria-hidden="true">&larr;</span> Anterior</a>
+	    </li>
+	    <li id="siguiente" class="next">
+	    	<a href="#" onclick="siguiente(this);">Siguiente <span aria-hidden="true">&rarr;</span></a>
+	    </li>
+	  </ul>
+	</nav>
+
+	<div class="col-sm-4 hidden-xs">
+
+		{{#each destacado in model}}
+			<div 
+				class="vista-previa col-sm-5 col-sm-offset-1 enlace" 
+				style="background-image:url({{unbound destacado.thumbnail}})"
+				data-titulo="{{unbound destacado.titulo}}"
+				data-descripcion="{{unbound destacado.descripcion}}"
+				data-imagen="{{unbound destacado.imagen}}"
+				data-enlace="{{unbound destacado.enlace}}"
+				onclick="seleccionar(this);">
+			</div>
+		{{/each}}
+
+	</div>
+</div>

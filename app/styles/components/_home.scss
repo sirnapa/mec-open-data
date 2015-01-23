@@ -1,0 +1,28 @@
+/* Pagina principal */
+.galeria{
+
+	.vista-previa{
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: 5px;
+		border: 1px solid $color_gris_medio;
+		margin-bottom: 20px; 
+
+		&.active{
+			border-color: $mec_color_rojo;
+		}
+	}
+
+	.vista-principal{
+		cursor: pointer;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		.carousel-caption{
+			background-color: rgba(0,0,0,0.3);
+		}
+	}
+
+}
