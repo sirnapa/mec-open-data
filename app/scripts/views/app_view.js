@@ -8,7 +8,16 @@ Ember.View = Ember.View.extend({
            facebook: true,
            googlePlus: true
          },
-         template: '<div class="box"><div class="left">Compartir</div><div class="middle"><a href="#" class="facebook">f</a><a href="#" class="twitter">t</a><a href="#" class="googleplus">+1</a></div><div class="right">{total}</div></div>',
+         urlCurl: 'bower_components/sharrre/sharrre.php',
+         template: '<div class="box">'+
+                     '<div class="left">Compartir</div>'+
+                     '<div class="middle">'+
+                       '<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>'+
+                       '<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>'+
+                       '<a href="#" class="googleplus"><i class="fa fa-google-plus"></i></a>'+
+                     '</div>'+
+                     '<div class="right">{total}</div>'+
+                   '</div>',
          enableHover: false,
          enableTracking: true,
          render: function(api, options){
