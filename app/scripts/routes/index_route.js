@@ -33,10 +33,10 @@ Mec.IndexRoute = Ember.Route.extend({
                 enlace: 'http://localhost/ejemplo5'
             },{
                 titulo: 'Ejemplo 6',
-                descripcion: 'Este es otro ejemplo de la galería',
-                imagen: 'images/destacados/ejemplo6.png',
-                thumbnail: 'images/thumbnails/ejemplo6.png',
-                enlace: 'http://localhost/ejemplo6'
+                descripcion: 'Ejemplo de imagen pesada',
+                imagen: 'http://graphics8.nytimes.com/images/2013/04/25/world/paraguay/paraguay-superJumbo.jpg',
+                thumbnail: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT-kTHfOi6pLrYxRlrk-ZT-AXI9BS6Z4ubk3g0JSqZIYWiWa_pw',
+                enlace: 'http://graphics8.nytimes.com/images/2013/04/25/world/paraguay/paraguay-superJumbo.jpg'
             }
         ];
     }

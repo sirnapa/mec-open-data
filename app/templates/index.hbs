@@ -1,10 +1,21 @@
 <div class="galeria">
 
 	<div class="row">
-		<div id="portada" class="col-sm-8 vista-principal cambio-automatico">
+		<div class="col-sm-8">
+
+			<div id="portada" class="vista-principal cambio-automatico">
+			</div>
+
+			<div id="informacion" class="carousel-caption">
+			</div>
+
+			<div id="cargando" class="cargando hidden">
+				<i class="fa fa-4x fa-spin fa-circle-o-notch"></i>
+			</div>
+
 		</div>
 
-		<nav class="col-sm-12 visible-xs">
+		<nav id="paginador" class="col-sm-12 visible-xs">
 		  <ul class="pager">
 		    <li id="anterior" class="previous">
 		    	<a href="#" onclick="anterior(this);"><span aria-hidden="true">&larr;</span> Anterior</a>

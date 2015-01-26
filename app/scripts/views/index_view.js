@@ -13,8 +13,9 @@ Mec.IndexView = Ember.View.extend({
             alto += $(vista).outerHeight(true);
 	        });
 
-        	$('#portada').data('total',$('.vista-previa').length)
-            .css('height', $('.vista-previa').first().is(':visible')? 
+        	$('#portada').data('total',$('.vista-previa').length);
+          $('#portada').parent().css('height', 
+            $('.vista-previa').first().is(':visible')? 
               (alto/2) - 15 : ($(window).height() - 30 -
                               $('header').outerHeight(true) - 
                               $('#anterior').parent().outerHeight(true)));
@@ -24,33 +25,65 @@ Mec.IndexView = Ember.View.extend({
         window.redimensionar();
 
       	window.cambiar = function(btn){
-      		$('.vista-previa.active').removeClass('active');
-      		$(btn).addClass('active');
 
-      		var indice = $(btn).data('indice');
+          $('#informacion').stop().fadeOut('fast',function(){
 
-      		$('#portada').css('background-image','url('+$(btn).data('imagen')+')')
-            .attr('onclick','window.open("'+$(btn).data('enlace')+'","_self");')
-      			.data('indice',indice)
-            .empty();
+             $('#portada').stop().fadeOut('slow',function(){
 
-          var info = $('<div>').addClass('carousel-caption')
-            .appendTo('#portada');
+              $('#cargando').removeClass('hidden');
+              $('.vista-previa.active').removeClass('active');
+              $(btn).addClass('active');
 
-          $('<h2>').html($(btn).data('titulo')).appendTo(info);
-          $('<p>').html($(btn).data('descripcion')).appendTo(info);
+              var indice = $(btn).data('indice');
+              var imagen = $(btn).data('imagen');
 
-      		if(indice==0){
-      			$('#anterior').addClass('disabled');
-      		}else{
-      			$('#anterior').removeClass('disabled');
-      		}
+              $('#portada').attr('onclick','window.open("'+$(btn).data('enlace')+'","_self");')
+                .data('indice',indice)
+                .empty();
 
-      		if(indice==($('#portada').data('total') - 1)){
-      			$('#siguiente').addClass('disabled');
-      		}else{
-      			$('#siguiente').removeClass('disabled');
-      		}
+              $('#informacion').empty();
+              $('<h2>').html($(btn).data('titulo')).appendTo('#informacion');
+              $('<p>').html($(btn).data('descripcion')).appendTo('#informacion');
+              $('#informacion').fadeIn();
+
+              if(indice==0){
+                $('#anterior').addClass('disabled');
+              }else{
+                $('#anterior').removeClass('disabled');
+              }
+
+              if(indice==($('#portada').data('total') - 1)){
+                $('#siguiente').addClass('disabled');
+              }else{
+                $('#siguiente').removeClass('disabled');
+              }
+
+              var cargar_imagen = function(){
+                  $(btn).addClass('imagen-descargada');
+
+                  if($('#portada').data('indice')==indice){
+                    $('#portada').css('background-image','url('+imagen+')');
+                    $('#cargando').addClass('hidden');
+                    $('#portada').fadeIn();
+                  }
+              };
+
+              if($(btn).hasClass('imagen-descargada')){
+                cargar_imagen();
+              }else{
+                $('<img>').load(cargar_imagen)
+                  .attr('src',imagen).each(function() {
+                    // fail-safe for cached images which sometimes don't trigger "load" events
+                    if(this.complete){
+                      $(this).load();
+                    }
+                  });
+              }
+
+            });
+
+          });
+
       	};
 
       	window.cambiar($('.vista-previa').first());
@@ -78,7 +111,7 @@ Mec.IndexView = Ember.View.extend({
             if($('#portada').hasClass('cambio-automatico')){
               var indice = $('#portada').data('indice');
 
-              if(!$('#siguiente').is(':visible')){
+              if(!$('#paginador').is(':visible')){
                 if(indice<($('#portada').data('total') - 1)){
                   siguiente($('#siguiente a'));
                 }else{
@@ -89,7 +122,7 @@ Mec.IndexView = Ember.View.extend({
               autocambio();
             }
 
-          }, 3000);
+          }, 5000);
         };
 
         window.autocambio();
