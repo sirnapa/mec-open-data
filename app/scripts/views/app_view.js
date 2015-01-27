@@ -2,6 +2,8 @@ Ember.View = Ember.View.extend({
     didInsertElement : function(){
         this._super();
 
+        $('select').combobox();
+
         $('#compartir').sharrre({
          share: {
            twitter: true,

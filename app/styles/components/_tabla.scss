@@ -55,6 +55,53 @@
 /* Tabla */
 .table{
 
+  thead{
+
+    .orden{
+
+      cursor: pointer;
+      
+      .descendente,.ascendente{
+        display: none;
+      }
+
+      &.ascendente{
+        .filtro{
+          display: none;
+        }
+        .ascendente{
+          display: inline-block;
+        }
+      }
+
+      &.descendente{
+        .filtro{
+          display: none;
+        }
+        .descendente{
+          display: inline-block;
+        }
+      }
+
+    }
+
+    .input-group{
+      margin-top: 5px;
+
+      input{
+        border-right: none;
+      }
+
+      .input-group-addon{
+        background: none;
+        padding: 0 5px 0 0;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
   .acciones{
 
     a{
