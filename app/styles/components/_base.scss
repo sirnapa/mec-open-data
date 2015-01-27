@@ -12,6 +12,20 @@ body{
     }
 }
 
+/* Contenedor principal */
+.caja{
+  @media (min-width: $screen-sm-min) {
+    &{
+      padding: 0px 30px;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    &{
+      padding: 0px 40px;
+    }
+  }
+}
+
 /* Old browsers */
 .browsehappy {
   margin: 0.2em 0;
