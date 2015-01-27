@@ -6,6 +6,7 @@
    <table class="table table-small-font table-bordered table-striped">
    		<thead>
    			<tr>
+				<th data-priority="1"></th>
    				<th data-priority="1">Periodo</th>
 				<th data-priority="1">Código Establecimiento</th>
 				<th data-priority="2">Departamento</th>
@@ -16,12 +17,20 @@
 				<th data-priority="2">Programa</th>
 				<th data-priority="2">Proyecto 111</th>
 				<th data-priority="2">Proyecto 822</th>
-				<th data-priority="1">Localización</th>
 			</tr>
    		</thead>
    		<tbody>
    			{{#each dato in model}}
    				<tr>
+   					<td class="acciones">
+						{{#if dato.localizacion}}
+							<a href="Javascript:void(0)" 
+								data-latitud="{{unbound dato.localizacion.latitud}}"
+								data-longitud="{{unbound dato.localizacion.longitud}}">
+								<i class="fa-lg icon-py-mapa"></i>
+							</a>
+						{{/if}}
+					</td>
    					<td>{{dato.periodo}}</td>
 					<td>
 						<a href="http://datos.mec.gov.py/doc/establecimientos/{{unbound dato.codigo_establecimiento}}">{{dato.codigo_establecimiento}}</a>
@@ -34,15 +43,6 @@
 					<td>{{dato.programa}}</td>
 					<td>{{dato.proyecto111}}</td>
 					<td>{{dato.proyecto822}}</td>
-					<td class="acciones">
-						{{#if dato.localizacion}}
-							<a href="Javascript:void(0)" 
-								data-latitud="{{unbound dato.localizacion.latitud}}"
-								data-longitud="{{unbound dato.localizacion.longitud}}">
-								<i class="fa-lg icon-py-mapa"></i> Ver mapa
-							</a>
-						{{/if}}
-					</td>
    				</tr>
    			{{/each}}
    		</tbody>
