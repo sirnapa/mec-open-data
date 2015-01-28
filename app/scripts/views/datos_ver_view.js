@@ -2,7 +2,11 @@ Mec.DatosVerView = Ember.View.extend({
     didInsertElement : function(){
         this._super();
 
-        $('.table-responsive').responsiveTable({});
+        var tabla = $('.table-responsive').responsiveTable({});
+        var botones_derecha = $('.btn-toolbar').find('.dropdown-btn-group button');
+        $(botones_derecha[0]).html('Ver todos');
+        $(botones_derecha[1]).html('Ver columnas');
+        $('.btn-toolbar .focus-btn-group button').html('<span class="glyphicon glyphicon-screenshot"></span> Resaltar');
 
         $('.orden').click(function(){
 
