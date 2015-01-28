@@ -1,6 +1,18 @@
 Mec.IndexView = Ember.View.extend({
     didInsertElement : function(){
         this._super();
+
+        var vistas = $('.vista-previa');
+        $('#portada').data('total',vistas.length);
+
+        for(var v=0; v<vistas.length; v=v+2){
+            var row = $('<div>').addClass('row');
+            var col = $('<div>').addClass('col-sm-12')
+              .appendTo(row);
+            $(vistas[v]).before(row);
+            $(vistas[v]).appendTo(col);
+            $(vistas[v+1]).appendTo(col);
+        }
         
         window.redimensionar = function(){
 
@@ -13,7 +25,6 @@ Mec.IndexView = Ember.View.extend({
             alto += $(vista).outerHeight(true);
 	        });
 
-        	$('#portada').data('total',$('.vista-previa').length);
           $('#portada').parent().css('height', 
             $('.vista-previa').first().is(':visible')? 
               (alto/2) - 15 : ($(window).height() - 30 -
