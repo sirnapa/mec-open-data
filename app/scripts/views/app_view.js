@@ -2,6 +2,8 @@ Ember.View = Ember.View.extend({
     didInsertElement : function(){
         this._super();
 
+        $('select').combobox();
+
         $('#compartir').sharrre({
          share: {
            twitter: true,
@@ -12,9 +14,9 @@ Ember.View = Ember.View.extend({
          template: '<div class="box">'+
                      '<div class="left">Compartir</div>'+
                      '<div class="middle">'+
-                       '<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>'+
-                       '<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>'+
-                       '<a href="#" class="googleplus"><i class="fa fa-google-plus"></i></a>'+
+                       '<a href="#" class="facebook"><i class="fa fa-fw fa-facebook"></i></a>'+
+                       '<a href="#" class="twitter"><i class="fa fa-fw fa-twitter"></i></a>'+
+                       '<a href="#" class="googleplus"><i class="fa fa-fw fa-google-plus"></i></a>'+
                      '</div>'+
                      '<div class="right">{total}</div>'+
                    '</div>',

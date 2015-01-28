@@ -12,6 +12,15 @@ body{
     }
 }
 
+/* Contenedor principal */
+.caja{
+  @media (min-width: $screen-sm-min) {
+    &{
+      padding: 0px $caja_espacio_costados;
+    }
+  }
+}
+
 /* Old browsers */
 .browsehappy {
   margin: 0.2em 0;
