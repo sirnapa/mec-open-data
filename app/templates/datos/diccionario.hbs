@@ -2,54 +2,52 @@
 <h1>Establecimientos escolares</h1>
 <br>
 
-<div class="listado">
+<ul class="listado">
 
-	<div class="row hidden-xs titulos">
-		<div class="col-sm-3">Nombre</div>
-		<div class="col-sm-4">Descripción</div>
-		<div class="col-sm-1">Tipo</div>
-		<div class="col-sm-2">Restricciones</div>
-		<div class="col-sm-1">Referencia</div>
-		<div class="col-sm-1">Ejemplo</div>
-	</div>
+	<li class="row hidden-xs titulos">
+		<div class="celda col-sm-3">Nombre</div>
+		<div class="celda col-sm-4">Descripción</div>
+		<div class="celda col-sm-1">Tipo</div>
+		<div class="celda col-sm-2">Restricciones</div>
+		<div class="celda col-sm-1">Referencia</div>
+		<div class="celda col-sm-1">Ejemplo</div>
+	</li>
 
-	<hr>
 	{{#each definicion in model}}
 
-		<div class="row">
+		<li class="row">
 
 			{{#if definicion.nombre}}<label class="col-xs-12 visible-xs">Nombre</label>{{/if}}
-    		<div class="col-sm-3">
+    		<div class="celda col-sm-3">
 				{{definicion.nombre}}
 			</div>
 
 			{{#if definicion.descripcion}}<label class="col-xs-12 visible-xs">Descripción</label>{{/if}}
-    		<div class="col-sm-4">
+    		<div class="celda col-sm-4">
             	{{definicion.descripcion}}
 			</div>
 
 			{{#if definicion.tipo}}<label class="col-xs-12 visible-xs">Tipo</label>{{/if}}
-    		<div class="col-sm-1">
+    		<div class="celda col-sm-1">
             	{{definicion.tipo}}
 			</div>
 
 			{{#if definicion.restricciones}}<label class="col-xs-12 visible-xs">Restricciones</label>{{/if}}
-    		<div class="col-sm-2">
+    		<div class="celda col-sm-2">
             	{{definicion.restricciones}}
 			</div>
 
 			{{#if definicion.referencia}}<label class="col-xs-12 visible-xs">Referencia</label>{{/if}}
-    		<div class="col-sm-1 napa">
+    		<div class="celda col-sm-1 napa">
             	<a href="{{unbound definicion.referencia.enlace}}">{{definicion.referencia.texto}}</a>
 			</div>
 
 			{{#if definicion.ejemplo}}<label class="col-xs-12 visible-xs">Ejemplo</label>{{/if}}
-    		<div class="col-sm-1">
+    		<div class="celda col-sm-1">
             	{{definicion.ejemplo}}
             </div>
 
-		</div>
-	  	<hr>
+		</li>
 
 	{{/each}}
 </div>

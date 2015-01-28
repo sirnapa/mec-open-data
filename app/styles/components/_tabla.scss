@@ -1,51 +1,72 @@
 /* Listados responsive */
 .listado{
-  .titulos{
-    font-family: "DaxlinePro-Medium","Helvetica Neue",​Helvetica,​Arial,​sans-serif !important;
-    font-size: 1.3em;
+  list-style: none;
+  padding: 0;
 
-    div{
-      overflow-x: hidden;
-    }
-  }
+  li{
 
-  label{
-    color: $mec_color_azul_marino;
-  }
+    &.titulos{
+      font-family: "DaxlinePro-Medium","Helvetica Neue",​Helvetica,​Arial,​sans-serif !important;
+      font-size: 1.3em;
 
-  .acciones{
-    margin-top: 5px;
-
-    a{
-      line-height: 2.5em;
-      font-size: 0.9em;
-      white-space: nowrap;
-      margin-right: 20px;
-
-      i{
-        font-size: 2em;
+      div{
+        overflow-x: hidden;
       }
     }
 
-  }
-  
-  @media (max-width: $screen-sm-min) {
-
-    label{
-      margin-top: 15px;
+    &:nth-child(2n){
+      background: $table-bg-accent;
     }
 
-    .contador{
-      float: left;
+    .celda{
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      @media (min-width: $screen-sm-min) {
+        height: 100%; 
+        border: 1px solid $table-border-color;
+      }
+    }
+
+    label{
+      color: $mec_color_azul_marino;
     }
 
     .acciones{
-      text-align: center;
+      margin-top: 5px;
 
       a{
-        margin-right: 15px;
+        line-height: 2.5em;
+        font-size: 0.9em;
+        white-space: nowrap;
+        margin-right: 20px;
+
+        i{
+          font-size: 2em;
+        }
       }
-      
+
+    }
+    
+    @media (max-width: $screen-sm-min) {
+
+      label{
+        margin-top: 15px;
+      }
+
+      .contador{
+        float: left;
+      }
+
+      .acciones{
+        text-align: center;
+
+        a{
+          margin-right: 15px;
+        }
+        
+      }
+
     }
 
   }
