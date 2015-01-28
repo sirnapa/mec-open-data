@@ -1,9 +1,13 @@
 /* Listados responsive */
+$borde_listado_celda: 1px solid $table-border-color;
+
 .listado{
   list-style: none;
-  padding: 0;
+  padding: 0 15px;
+  border: $borde_listado_celda;
 
   li{
+    border-bottom: $borde_listado_celda;
 
     &.titulos{
       font-family: "DaxlinePro-Medium","Helvetica Neue",​Helvetica,​Arial,​sans-serif !important;
@@ -23,13 +27,26 @@
       padding-bottom: 5px;
 
       @media (min-width: $screen-sm-min) {
-        height: 100%; 
-        border: 1px solid $table-border-color;
+        margin: 0;
+        height: 100%;
+        border-right: $borde_listado_celda;
       }
     }
 
     label{
       color: $mec_color_azul_marino;
+    }
+
+    @media (max-width: $screen-sm-min) {
+
+      label{
+        margin-top: 15px;
+      }
+
+      .contador{
+        float: left;
+      }
+
     }
 
     .acciones{
@@ -46,25 +63,12 @@
         }
       }
 
-    }
-    
-    @media (max-width: $screen-sm-min) {
-
-      label{
-        margin-top: 15px;
-      }
-
-      .contador{
-        float: left;
-      }
-
-      .acciones{
+      @media (max-width: $screen-sm-min) {
         text-align: center;
 
         a{
           margin-right: 15px;
         }
-        
       }
 
     }
