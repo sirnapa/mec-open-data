@@ -8,4 +8,5 @@ Mec.Router.map(function () {
 		this.route('mapa');
 	});
 	this.resource('visualizaciones');
+	this.resource('participa');
 });
