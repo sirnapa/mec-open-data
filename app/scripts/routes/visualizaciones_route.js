@@ -5,7 +5,8 @@ Mec.VisualizacionesRoute = Ember.Route.extend({
                 titulo: 'Ejemplo 1',
                 descripcion: 'Este es un ejemplo de visualización',
                 imagen: 'images/thumbnails/ejemplo1.png',
-                enlace: 'http://localhost/ejemplo1'
+                enlace: 'http://localhost/ejemplo1',
+                blog: 'http://localhost/blog'
             },{
                 titulo: 'Ejemplo 2',
                 descripcion: 'Este es otro ejemplo de visualización',
@@ -35,7 +36,8 @@ Mec.VisualizacionesRoute = Ember.Route.extend({
                 titulo: 'Ejemplo 7',
                 descripcion: 'Este es un ejemplo de visualización',
                 imagen: 'images/thumbnails/ejemplo1.png',
-                enlace: 'http://localhost/ejemplo1'
+                enlace: 'http://localhost/ejemplo1',
+                blog: 'http://localhost/blog'
             },{
                 titulo: 'Ejemplo 8',
                 descripcion: 'Este es otro ejemplo de visualización',
