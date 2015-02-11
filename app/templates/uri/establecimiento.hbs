@@ -1,0 +1,67 @@
+<div class="submenu pull-right hidden-xs">
+	{{#link-to 'datos.ver' class="btn-lg hidden-xs"}}<i class="icon-py-datos"></i> Ver datos{{/link-to}}
+	{{#link-to 'datos.diccionario' class="btn-lg hidden-xs"}}<i class="icon-py-manual"></i> Ver diccionario{{/link-to}}
+</div>
+
+<h1>Establecimiento escolar</h1>
+<br>	
+
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+  	<label class="col-sm-4 label-combo">Período </label>
+	<div class="col-sm-8">
+		<select class="form-control"> 
+			<option>2014</option>
+			<option>2012</option>
+		</select>
+	</div>
+  </div>
+</form>
+
+<div class="clearfix"></div>
+<hr>
+
+<div class="row" id="bloques">
+	{{#each modelo in model}}
+		<div class="col-sm-6 bloque">
+			<h2>Datos del Establecimiento</h2>
+			<ul class="listado">
+					{{#each dato in modelo.datos}}
+						<li class="row">
+							<div class="celda col-sm-4"><strong class="daxline">{{dato.titulo}}</strong></div>
+							<div class="celda col-sm-8">{{dato.contenido}}</div>
+						</li>
+					{{/each}}
+			</ul>
+
+			<hr>
+			<br>
+
+			<h2>Instituciones del Establecimiento</h2>
+			<ul class="listado">
+					<li class="row hidden-xs titulos">
+						<div class="celda col-sm-4">Código</div>
+						<div class="celda col-sm-4">Nombre</div>
+						<div class="celda col-sm-4">Matriculados</div>
+					</li>
+
+					{{#each institucion in modelo.instituciones}}
+						<li class="row">
+							{{#if institucion.codigo}}<label class="col-xs-12 visible-xs">Código</label>{{/if}}
+							<div class="celda col-sm-4">{{institucion.codigo}}</div>
+
+							{{#if institucion.nombre}}<label class="col-xs-12 visible-xs">Nombre</label>{{/if}}
+							<div class="celda col-sm-4">{{institucion.nombre}}</div>
+
+							{{#if institucion.matriculados}}<label class="col-xs-12 visible-xs">Matriculados</label>{{/if}}
+							<div class="celda col-sm-4 text-right">{{institucion.matriculados}}</div>
+						</li>
+					{{/each}}
+			</ul>
+		</div>
+
+		<div class="col-sm-6 bloque">
+			{{google-maps latitud="-25.279655" longitud="-57.6087641" simple="true"}}
+		</div>
+	{{/each}}
+</div>

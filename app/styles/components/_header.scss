@@ -38,8 +38,10 @@ header{
 			font-size: 1.1em;
 
 			&:not(.navbar-brand):hover,
-			&:not(.navbar-brand):focus{
+			&:not(.navbar-brand):focus,
+			&:not(.navbar-brand).active{
 				color: $color_negro;
+				background: $gray-lighter;
 			}
 		}
 
