@@ -1,4 +1,4 @@
-Mec.ParticipaRoute = Ember.Route.extend({
+Mec.Participa2Route = Ember.Route.extend({
     model: function () {
         return [
             {

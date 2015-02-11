@@ -1,101 +1,15 @@
 <h1>Participa</h1>
 
-<div class="col-md-6">
-	<form class="form-horizontal">
-	  <div class="form-group">
-	    <label for="nombre" class="col-sm-2 control-label">Nombre</label>
-	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="apellido" class="col-sm-2 control-label">Apellido</label>
-	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="email" class="col-sm-2 control-label">Email</label>
-	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" placeholder="Email" required>
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="asunto" class="col-sm-2 control-label">Asunto</label>
-	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="asunto" placeholder="Asunto" required>
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="categoria" class="col-sm-2 control-label">Categoría</label>
-	    <div class="col-sm-10">
-	      <select class="form-control" id="categoria" placeholder="Categoría" required>
-	      	<option></option>
-	      	<option value="1">Duda</option>
-			<option value="2">Publicación de un nuevo dataset</option>
-			<option value="3">Mejora en el portal</option>
-			<option value="4">Visualización</option>
-			<option value="">Otros</option>
-	      </select>
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label for="mensaje" class="col-sm-2 control-label">Mensaje</label>
-	    <div class="col-sm-10">
-	      	<textarea class="form-control" id="mensaje" placeholder="Mensaje" rows="3" required></textarea>
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <div class="col-sm-offset-2 col-sm-10">
-	      <button type="submit" class="btn btn-primary">Enviar</button>
-	      <a href="Javascript:void(0);" class="btn btn-default">Cancelar</a>
-	    </div>
-	  </div>
-	</form>
-</div>
-
-<div class="col-md-6">
-
-	<form class="form-inline pull-right">
-	  <div class="form-group">
-	    <label for="ordenarpor" class="label-combo">Ordenar por </label>
-	    <select class="form-control" id="ordenarpor" class="form-control text-left">
-			<option value="1">Fecha</option>
-			<option value="2">Título</option>
-		</select>
-	  </div>
-	</form>
-  	
-  	<div class="clearfix"></div>
-	<hr>
-
-	<div id="consultas">
-
-		{{#each consulta in model}}
-		      <div class="consulta col-sm-6">
-
-		        <div class="well">
-		        	<h3>{{consulta.asunto}} <small>por {{consulta.ciudadano}} - {{consulta.fecha}}</small></h3>
-		        	<p>{{consulta.mensaje}}</p>
-		        </div>
-
-		      </div>
-		{{/each}}
-
-	</div>
-
-	<div class="text-center">
-		<nav>
-		  <ul class="pagination">
-		    <li><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
-		    <li><a href="#">1</a></li>
-		    <li><a href="#">2</a></li>
-		    <li><a href="#">3</a></li>
-		    <li><a href="#">4</a></li>
-		    <li><a href="#">5</a></li>
-		    <li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
-		  </ul>
-		</nav>
-	</div>
-	
-</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'rockntown';
+    var disqus_identifier = 'mec-datosabiertos-participa';
+ 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Por favor activa Javascript para ver los comentarios.</noscript>
