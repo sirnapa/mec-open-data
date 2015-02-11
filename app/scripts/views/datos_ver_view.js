@@ -8,6 +8,30 @@ Mec.DatosVerView = Ember.View.extend({
         $(botones_derecha[1]).html('Ver columnas');
         $('.btn-toolbar .focus-btn-group button').html('<span class="glyphicon glyphicon-screenshot"></span> Resaltar');
 
+
+        var tabla_original = tabla.find('div').next('table');
+        var filtros_clonados = tabla.find('table').first().find('thead tr th');
+        var titulos = [];
+
+        tabla_original.find('thead tr th').each(function(t,th){
+            titulos.push($(th).find('span[data-titulo=true]').html());
+
+            // De original a clonado
+            $(th).find('input,select').keyup(function(){
+                $(filtros_clonados[t]).find('input,select').val($(this).val());
+            });
+
+            // De clonado a original
+            $(filtros_clonados[t]).find('input,select').keyup(function(){
+                $(th).find('input,select').val($(this).val());
+            });
+
+        });
+
+        $(botones_derecha[1]).next().find('li').each(function(l,li){
+            $(li).find('label').html(titulos[l]);
+        });
+
         $('.orden').click(function(){
 
         	// El comportamiento del botón es:
