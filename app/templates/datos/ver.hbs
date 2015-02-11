@@ -168,7 +168,7 @@
    				<tr>
    					<td class="acciones">
 						{{#if dato.localizacion}}
-							<a href="Javascript:void(0)" 
+							<a href="Javascript:void(0)" onclick="abrirMapa();"
 								data-latitud="{{unbound dato.localizacion.latitud}}"
 								data-longitud="{{unbound dato.localizacion.longitud}}">
 								<i class="fa-lg icon-py-mapa"></i>
@@ -217,4 +217,15 @@
 	    <li><a href="#"><i class="fa fa-fw fa-file-o"></i> Archivo CSV</a></li>
 	    <li><a href="#"><i class="fa fa-fw fa-file-pdf-o"></i> Archivo PDF</a></li>
 	</ul>
+</div>
+
+<div class="fondo-mapa hidden">
+	{{google-maps latitud="-25.279655" longitud="-57.6087641" simple="true"}}
+	<div class="btn-toolbar" role="toolbar">
+	  <div class="btn-group">
+		<button class="atras btn btn-primary" onclick="cerrarMapa();">
+			<i class="fa fa-arrow-left"></i> Volver
+		</button>
+	  </div>
+	</div>
 </div>
