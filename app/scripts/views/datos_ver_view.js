@@ -7,7 +7,7 @@ Mec.DatosVerView = Ember.View.extend({
         $(botones_derecha[0]).html('Ver todos');
         $(botones_derecha[1]).html('Ver columnas');
         $('.btn-toolbar .focus-btn-group button').unbind()
-            .html('<span class="fa-lg icon-py-mapa"></span> <span class="hidden-xs">Todas las localizaciones</span>')
+            .html('<span class="fa-lg icon-py-mapa"></span> <span class="hidden-xs">Ver todas las localizaciones</span>')
             .attr('onclick','abrirMapa();');
 
 

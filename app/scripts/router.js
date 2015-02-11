@@ -9,7 +9,6 @@ Mec.Router.map(function () {
 	});
 	this.resource('visualizaciones');
 	this.resource('participa');
-	this.resource('participa2');
 	this.resource('uri',function(){
 		this.route('establecimiento');
 		this.route('institucion');
