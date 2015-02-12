@@ -177,7 +177,9 @@
 					</td>
    					<td>{{dato.periodo}}</td>
 					<td>
-						<a href="http://datos.mec.gov.py/doc/establecimientos/{{unbound dato.codigo_establecimiento}}">{{dato.codigo_establecimiento}}</a>
+						{{#link-to 'uri.establecimiento'}}
+							{{dato.codigo_establecimiento}}
+						{{/link-to}}
 					</td>
 					<td>{{dato.departamento}}</td>
 					<td>{{dato.distrito}}</td>
