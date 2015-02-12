@@ -6,10 +6,15 @@ Mec.DatosVerView = Ember.View.extend({
         var botones_derecha = $('.btn-toolbar').find('.dropdown-btn-group button');
         $(botones_derecha[0]).html('Ver todos');
         $(botones_derecha[1]).html('Ver columnas');
+
+        // Para sitios con localización
         $('.btn-toolbar .focus-btn-group button').unbind()
             .html('<span class="fa-lg icon-py-mapa"></span> <span class="hidden-xs">Ver todas las localizaciones</span>')
             .attr('onclick','abrirMapa();');
 
+        // Para sitios sin localización
+        // $('.btn-toolbar .focus-btn-group button').unbind().remove();
+        //
 
         var tabla_original = tabla.find('div').next('table');
         var filtros_clonados = tabla.find('table').first().find('thead tr th');
