@@ -4,21 +4,16 @@ Mec.DatosVerView = Ember.View.extend({
 
         // Correcciones del ancho de los select en el filtro de la tabla
 
-        $('.table-responsive thead .combobox-container input').change(function(){
+        $('.table-responsive thead .combobox-container input.form-control').change(function(){
             var texto = $(this).val();
             var celda = $(this).parent().parent().parent();
+            var ancho = (celda.is('th'))?
+                (parseInt(texto.length) * 8 + 60) : 30;
 
-            if(texto.length){
-                var ancho = parseInt(texto.length) * 6;
-                ancho = (ancho>24? ancho : 30) + (celda.is('th')? 60 : 0);
-                celda.css('min-width', ancho);
-                if(!celda.is('th')){
-                    celda.css('max-width', ancho);
-                }
-            }else{
-                celda.css('min-width',60);
+            celda.css('min-width', ancho);
+            if(!celda.is('th')){
+                celda.css('max-width', ancho);
             }
-
         });
 
         $('.table-responsive thead .combobox-container input').trigger('change');
