@@ -121,8 +121,36 @@ $borde_listado_celda: 1px solid $table-border-color;
         background: none;
         padding: 0 5px 0 0;
         cursor: pointer;
+
+        .combobox-container {
+            margin: -6px -5px -1px 0;
+
+            .input-group{
+
+              .form-control{
+                border: none;
+                background: none;
+                min-width: auto;
+
+                &[readonly].comparador{
+                  cursor: pointer;
+                }
+              }
+
+              .dropdown-toggle{
+                display: none;
+              }
+
+            }
+
+        }
+
       }
 
+    }
+
+    .form-control{
+      min-width: 50px;
     }
 
   }
