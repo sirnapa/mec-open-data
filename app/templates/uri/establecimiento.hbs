@@ -28,7 +28,7 @@
 			<ul class="listado">
 					{{#each dato in modelo.datos}}
 						<li class="row">
-							<div class="celda col-sm-4"><strong class="daxline">{{dato.titulo}}</strong></div>
+							<div class="celda col-sm-4"><strong>{{dato.titulo}}</strong></div>
 							<div class="celda col-sm-8">{{dato.contenido}}</div>
 						</li>
 					{{/each}}
@@ -48,10 +48,14 @@
 					{{#each institucion in modelo.instituciones}}
 						<li class="row">
 							{{#if institucion.codigo}}<label class="col-xs-12 visible-xs">Código</label>{{/if}}
-							<div class="celda col-sm-4">{{institucion.codigo}}</div>
+							<div class="celda col-sm-4">
+								{{#link-to 'uri.institucion'}}{{institucion.codigo}} <i class="fa fa-external-link text-muted"></i>{{/link-to}}
+							</div>
 
 							{{#if institucion.nombre}}<label class="col-xs-12 visible-xs">Nombre</label>{{/if}}
-							<div class="celda col-sm-4">{{institucion.nombre}}</div>
+							<div class="celda col-sm-4">
+								{{#link-to 'uri.institucion'}}{{institucion.nombre}} <i class="fa fa-external-link text-muted"></i>{{/link-to}}
+							</div>
 
 							{{#if institucion.matriculados}}<label class="col-xs-12 visible-xs">Matriculados</label>{{/if}}
 							<div class="celda col-sm-4 text-right">{{institucion.matriculados}}</div>

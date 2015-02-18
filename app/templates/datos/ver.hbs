@@ -20,7 +20,14 @@
 					</span>
 					
 					<div class="input-group input-group-sm">
-					  <input type="text" class="form-control" placeholder="">
+					  <span class="input-group-addon">
+					  	<select class="form-control input-sm comparador">
+						  <option>=</option>
+						  <option>&gt;</option>
+						  <option>&lt;</option>
+						</select>
+					  </span>
+					  <input type="number" class="form-control" placeholder="">
 					  <span class="input-group-addon limpiar"><i class="fa fa-times"></i></span>
 					</div>
 				</th>
@@ -177,7 +184,9 @@
 					</td>
    					<td>{{dato.periodo}}</td>
 					<td>
-						<a href="http://datos.mec.gov.py/doc/establecimientos/{{unbound dato.codigo_establecimiento}}">{{dato.codigo_establecimiento}}</a>
+						{{#link-to 'uri.establecimiento'}}
+							{{dato.codigo_establecimiento}}
+						{{/link-to}}
 					</td>
 					<td>{{dato.departamento}}</td>
 					<td>{{dato.distrito}}</td>

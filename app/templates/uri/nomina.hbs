@@ -1,0 +1,94 @@
+<div class="submenu pull-right hidden-xs">
+	{{#link-to 'datos.ver' class="btn-lg hidden-xs"}}<i class="icon-py-datos"></i> Ver datos{{/link-to}}
+	{{#link-to 'datos.diccionario' class="btn-lg hidden-xs"}}<i class="icon-py-manual"></i> Ver diccionario{{/link-to}}
+</div>
+
+<h1>Nómina</h1>
+<br>	
+
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+  	<label class="col-sm-4 label-combo">Período </label>
+	<div class="col-sm-8">
+		<select class="form-control"> 
+			<option>2014</option>
+		</select>
+	</div>
+  </div>
+  <div class="form-group">
+  	<label class="col-sm-4 label-combo">Mes </label>
+	<div class="col-sm-8">
+		<select class="form-control"> 
+			<option>Octubre</option>
+		</select>
+	</div>
+  </div>
+</form>
+
+<div class="clearfix"></div>
+<hr>
+
+	{{#each modelo in model}}
+		<div class="row">
+			<div class="col-sm-6">
+				<h2>Datos del administrativo</h2>
+				<ul class="listado">
+						{{#each dato in modelo.datos}}
+							<li class="row">
+								<div class="celda col-sm-4"><strong>{{dato.titulo}}</strong></div>
+								<div class="celda col-sm-8">{{dato.contenido}}</div>
+							</li>
+						{{/each}}
+				</ul>
+			</div>
+		</div>
+
+		<hr>
+		<br>
+
+		<div class="">
+			<h2>Detalles de la Asignación</h2>
+			<ul class="listado">
+					<li class="row hidden-xs titulos">
+						<div class="celda col-sm-4">Concepto</div>
+						<div class="celda col-sm-2">Dependencia</div>
+						<div class="celda col-sm-1">Cargo</div>
+						<div class="celda col-sm-1">Categoría<br>Rubro</div>
+						<div class="celda col-sm-1">Asignación<br>Categoría<br>Rubro</div>
+						<div class="celda col-sm-1">Cantidad</div>
+						<div class="celda col-sm-1">Asignación</div>
+						<div class="celda col-sm-1">Devuelto</div>
+					</li>
+
+					{{#each asignacion in modelo.asignaciones}}
+						<li class="row">
+							{{#if asignacion.concepto}}<label class="col-xs-12 visible-xs">Concepto</label>{{/if}}
+							<div class="celda col-sm-4">{{asignacion.concepto}}</div>
+
+							{{#if asignacion.dependencia}}<label class="col-xs-12 visible-xs">Dependencia</label>{{/if}}
+							<div class="celda col-sm-2">{{asignacion.dependencia}}</div>
+
+							{{#if asignacion.cargo}}<label class="col-xs-12 visible-xs">Cargo</label>{{/if}}
+							<div class="celda col-sm-1">{{asignacion.cargo}}</div>
+
+							{{#if asignacion.categoriarubro}}<label class="col-xs-12 visible-xs">Categoría<br>Rubro</label>{{/if}}
+							<div class="celda col-sm-1">{{asignacion.categoriarubro}}</div>
+							
+							{{#if asignacion.asignacioncategoriarubro}}<label class="col-xs-12 visible-xs">Asignación<br>Categoría<br>Rubro</label>{{/if}}
+							<div class="celda col-sm-1 text-right">{{asignacion.asignacioncategoriarubro}}</div>
+
+							{{#if asignacion.cantidad}}<label class="col-xs-12 visible-xs">Cantidad</label>{{/if}}
+							<div class="celda col-sm-1 text-right">{{asignacion.cantidad}}</div>
+
+							{{#if asignacion.asignacion}}<label class="col-xs-12 visible-xs">Asignación</label>{{/if}}
+							<div class="celda col-sm-1 text-right">{{asignacion.asignacion}}</div>
+
+							{{#if asignacion.devuelto}}<label class="col-xs-12 visible-xs">Devuelto</label>{{/if}}
+							<div class="celda col-sm-1 text-right">{{asignacion.devuelto}}</div>
+
+
+						</li>
+					{{/each}}
+			</ul>
+		</div>
+	{{/each}}
